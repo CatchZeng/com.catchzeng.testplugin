@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AMAlert</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+            <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+            <script type="text/javascript" charset="utf-8">
+
+            function testPlugin() {
+                testModel.testPlugin(alertSuccess,alertFail,["我是JS传来的参数！"]);
+            }
+
+            function alertSuccess(msg) {
+                alert(msg);
+            }
+
+            function alertFail(msg) {
+                alert('调用OC失败: ' + msg);
+            }
+            </script>
+    </head>
+
+    <body style="padding-top:50px">
+        <button style="font-size:17px;" onclick="testPlugin();">调用iOS插件</button> <br>
+    </body>
+</html>

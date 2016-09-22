@@ -1,0 +1,43 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/widget": [
+                        {
+                            "xml": "<feature name=\"testPlugin\"><param name=\"ios-package\" value=\"TestPlugin\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.catchzeng.testCordova"
+        },
+        "com.catchzeng.testplugin": {
+            "PACKAGE_NAME": "com.catchzeng.testCordova"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "com.catchzeng.testplugin.testModel",
+            "file": "plugins/com.catchzeng.testplugin/www/testPlugin.js",
+            "pluginId": "com.catchzeng.testplugin",
+            "clobbers": [
+                "testModel"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.3.0",
+        "com.catchzeng.testplugin": "1.0.0"
+    }
+}

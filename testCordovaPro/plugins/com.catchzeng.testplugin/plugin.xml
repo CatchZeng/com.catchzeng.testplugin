@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<plugin xmlns="http://phonegap.com/ns/plugins/1.0"
+    id="com.catchzeng.testplugin"
+    version="1.0.0">
+    <engines>
+        <engine name="cordova" version=">=3.3.0" />
+    </engines>
+    
+    <name>testPlugin</name>
+    <description>测试插件</description>
+    
+    <js-module src="www/testPlugin.js" name="testModel">
+        <clobbers target="testModel" />
+    </js-module>
+    
+    <platform name="ios">
+        <source-file src="src/ios/TestPlugin.m" />
+        <header-file src="src/ios/TestPlugin.h" />
+        <source-file src="src/ios/TestViewController.m" />
+        <header-file src="src/ios/TestViewController.h" />
+        <resource-file src="src/ios/TestViewController.xib" />
+        <resource-file src="src/ios/test.png" />
+        
+        <config-file target="config.xml" parent="/widget">
+            
+            <feature name="testPlugin">
+                <param name="ios-package" value="TestPlugin" />
+            </feature>
+        </config-file>
+    </platform>
+</plugin>
